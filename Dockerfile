@@ -8,5 +8,5 @@ RUN pwd
 FROM openjdk:8-jre
 
 WORKDIR /app
-COPY --from=0 /book-api/target/book-api.jar book-api.jar
+COPY --from=0 /book-api/target/book-api-1.0.0.jar book-api.jar
 ENTRYPOINT java -jar book-api.jar
