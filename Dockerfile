@@ -7,6 +7,7 @@ RUN ls target
 RUN pwd
 FROM openjdk:8-jre
 
+ARG VERSION
 WORKDIR /app
-COPY --from=0 /book-api/target/book-api-1.0.0.jar book-api.jar
+COPY --from=0 /book-api/target/book-api-${VERSION}.jar book-api.jar
 ENTRYPOINT java -jar book-api.jar
