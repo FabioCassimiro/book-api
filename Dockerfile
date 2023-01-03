@@ -3,7 +3,8 @@ WORKDIR /book-api
 COPY src src
 COPY pom.xml pom.xml
 RUN mvn package
-
+RUN ls
+RUN pwd
 FROM openjdk:8-jre
 
 WORKDIR /app
