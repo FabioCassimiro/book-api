@@ -1,6 +1,4 @@
 FROM openjdk:8-jre
-RUN mkdir app
-ARG JAR_FILE
-ADD /target/${JAR_FILE} /app/book-api.jar
 WORKDIR /app
+COPY target/app/book-api.jar book-api.jar
 ENTRYPOINT java -jar book-api.jar
