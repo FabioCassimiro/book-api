@@ -1,4 +1,4 @@
-FROM 3-amazoncorretto-8
+FROM maven:3-amazoncorretto-8
 WORKDIR /book-api
 COPY src src
 COPY pom.xml pom.xml
