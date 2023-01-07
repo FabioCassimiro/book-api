@@ -47,7 +47,7 @@ public class BookController {
 
     @GetMapping("/health")
     public String health() {
-        return "O serviço esta de online " + System.getenv("ENV_TEST");
+        return "O serviço esta de online " + System.getenv("$ENV_TEST");
     }
 
 
